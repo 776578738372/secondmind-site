@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SecondMind — You don't manage your reminders. SecondMind does.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#FAFAF8; --surface:#FFFFFF; --border:#E6E4F0;
+    --text:#1C1B22; --text-soft:#6B6B76;
+    --brand:#6366F1; --brand-dark:#4C4FD8; --brand-tint:#EEEDFC;
+    --wa-out:#D9FDD3;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;line-height:1.6;}
+  h1,h2,.display{font-family:'Space Grotesk',sans-serif;letter-spacing:-0.02em;}
+
+  .wrap{max-width:920px;margin:0 auto;padding:0 24px;}
+  header{padding:28px 0;display:flex;align-items:center;gap:10px;font-weight:700;font-size:18px;}
+  header .dot{width:10px;height:10px;border-radius:50%;background:var(--brand);}
+
+  .hero{padding:60px 0 40px 0;display:grid;grid-template-columns:1.1fr 0.9fr;gap:48px;align-items:center;}
+  @media (max-width:820px){.hero{grid-template-columns:1fr;padding-top:20px;}}
+  .eyebrow{display:inline-block;font-size:13px;font-weight:600;color:var(--brand-dark);background:var(--brand-tint);padding:5px 12px;border-radius:999px;margin-bottom:18px;}
+  h1{font-size:40px;line-height:1.15;margin:0 0 18px 0;font-weight:700;}
+  .sub{font-size:17px;color:var(--text-soft);max-width:440px;margin-bottom:26px;}
+  .cta-row{display:flex;gap:12px;flex-wrap:wrap;}
+  .btn{background:var(--brand);color:#fff;text-decoration:none;font-weight:600;font-size:14.5px;padding:12px 22px;border-radius:10px;display:inline-block;}
+  .btn.ghost{background:var(--surface);color:var(--text);border:1px solid var(--border);}
+
+  /* signature: live chat demo */
+  .phone{background:#0B141A;border-radius:20px;padding:8px;box-shadow:0 20px 50px rgba(28,27,34,0.12);max-width:300px;margin:0 auto;}
+  .phone-top{background:#1F2C34;color:#fff;padding:10px 14px;border-radius:13px 13px 0 0;font-size:13px;font-weight:600;display:flex;align-items:center;gap:8px;}
+  .phone-top .av{width:24px;height:24px;border-radius:50%;background:var(--brand);}
+  .phone-body{background:#ECE5DD;padding:14px 10px;border-radius:0 0 13px 13px;min-height:220px;}
+  .msg{max-width:85%;padding:8px 11px;border-radius:9px;font-size:13px;margin-bottom:8px;line-height:1.4;box-shadow:0 1px 1px rgba(0,0,0,.08);opacity:0;animation:fadeIn .5s ease forwards;}
+  .msg.out{background:var(--wa-out);margin-left:auto;border-top-right-radius:2px;}
+  .msg.in{background:#fff;border-top-left-radius:2px;}
+  .msg:nth-child(1){animation-delay:.2s;}
+  .msg:nth-child(2){animation-delay:1s;}
+  .msg:nth-child(3){animation-delay:3.5s;}
+  @keyframes fadeIn{from{opacity:0;transform:translateY(4px);}to{opacity:1;transform:translateY(0);}}
+  @media (prefers-reduced-motion: reduce){.msg{animation:none;opacity:1;}}
+
+  section{padding:36px 0;border-top:1px solid var(--border);}
+  section h2{font-size:22px;margin:0 0 14px 0;}
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+  @media (max-width:720px){.grid3{grid-template-columns:1fr;}}
+  .card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:20px;}
+  .card .k{font-size:13px;font-weight:700;color:var(--brand-dark);margin-bottom:6px;}
+  .card p{font-size:14px;color:var(--text-soft);margin:0;}
+
+  footer{padding:36px 0 50px 0;color:var(--text-soft);font-size:13.5px;border-top:1px solid var(--border);}
+  footer a{color:var(--brand-dark);}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <span class="dot"></span> SecondMind
+  </header>
+
+  <div class="hero">
+    <div>
+      <span class="eyebrow">AI-powered reminders</span>
+      <h1>You don't manage your reminders.<br>SecondMind does.</h1>
+      <p class="sub">Tell SecondMind what to remember, in plain English, on WhatsApp or the web. It figures out how urgent it is, when to nudge you again, and when to leave you alone — automatically.</p>
+      <div class="cta-row">
+        <a class="btn" href="mailto:manish.aice83@gmail.com">Get in touch</a>
+        <a class="btn ghost" href="#how-it-works">How it works</a>
+      </div>
+    </div>
+
+    <div class="phone" aria-hidden="true">
+      <div class="phone-top"><span class="av"></span> SecondMind</div>
+      <div class="phone-body">
+        <div class="msg out">take my medicine at 9pm</div>
+        <div class="msg in">💊 Got it — I'll remind you at 9:00 PM, and check in again if you don't reply.</div>
+        <div class="msg in">💊 Reminder: take your medicine</div>
+      </div>
+    </div>
+  </div>
+
+  <section id="how-it-works">
+    <h2>How it works</h2>
+    <div class="grid3">
+      <div class="card">
+        <div class="k">Just say it</div>
+        <p>No forms, no categories to pick. Write a reminder the way you'd tell a person — SecondMind understands the rest.</p>
+      </div>
+      <div class="card">
+        <div class="k">It decides the urgency</div>
+        <p>A missed medicine reminder gets followed up. A missed birthday note doesn't get repeated five times. SecondMind tells the difference.</p>
+      </div>
+      <div class="card">
+        <div class="k">It knows when to wait</div>
+        <p>Busy in a meeting? Non-urgent nudges hold off until you're free — nothing important ever gets buried, and nothing trivial interrupts you.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>About</h2>
+    <p style="color:var(--text-soft);font-size:14.5px;max-width:640px;">
+      SecondMind is an independently built personal reminder assistant, available on WhatsApp and the web.
+      Registered as a Micro Enterprise under India's Udyam scheme (UDYAM-RJ-17-0659423), based in Jaipur, Rajasthan.
+    </p>
+  </section>
+
+  <footer>
+    SecondMind &middot; Jaipur, Rajasthan, India &middot; <a href="mailto:manish.aice83@gmail.com">manish.aice83@gmail.com</a>
+  </footer>
+
+</div>
+</body>
+</html>
